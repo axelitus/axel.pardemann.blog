@@ -1,0 +1,33 @@
+{
+  "name": "@axelitus/axel.pardemann.blog",
+  "version": "0.0.1",
+  "description": "Axel Pardemann Blog",
+  "keywords": [
+    "blog",
+    "laravel",
+    "php",
+    "tech",
+    "vuejs",
+    "vuepress"
+  ],
+  "authors": {
+    "name": "Axel Pardemann",
+    "email": "axel@pardemann.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/axelitus/axel.pardemann.blog.git"
+  },
+  "scripts": {
+    "serve": "vuepress dev src",
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.8.4",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.4.6",
+    "vuepress": "^1.5.2"
+  }
+}

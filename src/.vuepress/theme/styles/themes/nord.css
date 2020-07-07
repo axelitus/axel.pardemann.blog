@@ -1,0 +1,81 @@
+.theme-nord {
+    /* Neutrals */
+    --color-neutral-050: #f8f9fb;
+    --color-neutral-100: #eceff4;
+    --color-neutral-200: #e5e9f0;
+    --color-neutral-300: #d8dee9;
+    --color-neutral-400: #929aaa;
+    --color-neutral-500: #4c566a;
+    --color-neutral-600: #434c5e;
+    --color-neutral-700: #3b4252;
+    --color-neutral-800: #2e3440;
+    --color-neutral-900: #242933;
+
+    /* Primary */
+    --color-primary-050: #e4efef;
+    --color-primary-100: #c9dfdf;
+    --color-primary-200: #8fbcbb;
+    --color-primary-300: #8bbec5;
+    --color-primary-400: #88c0d0;
+    --color-primary-500: #85b1c8;
+    --color-primary-600: #81a1c1;
+    --color-primary-700: #7192b7;
+    --color-primary-800: #5e81ac;
+    --color-primary-900: #3f608a;
+
+    /* Support */
+    --color-support-first-050: #fefafa;
+    --color-support-first-100: #fbf0f5;
+    --color-support-first-200: #f7e2ed;
+    --color-support-first-300: #e8cbdd;
+    --color-support-first-400: #d2b0c8;
+    --color-support-first-500: #b48ead;
+    --color-support-first-600: #9a6796;
+    --color-support-first-700: #814781;
+    --color-support-first-800: #622d68;
+    --color-support-first-900: #4a1b56;
+
+    --color-support-second-050: #fef9f4;
+    --color-support-second-100: #fbe9e3;
+    --color-support-second-200: #f8d0c7;
+    --color-support-second-300: #ebaca6;
+    --color-support-second-400: #d88889;
+    --color-support-second-500: #bf616a;
+    --color-support-second-600: #a44658;
+    --color-support-second-700: #893049;
+    --color-support-second-800: #6e1e3c;
+    --color-support-second-900: #5b1234;
+
+    --color-support-third-050: #fefcee;
+    --color-support-third-100: #fef7d6;
+    --color-support-third-200: #feedae;
+    --color-support-third-300: #fee185;
+    --color-support-third-400: #fdd467;
+    --color-support-third-500: #fcc035;
+    --color-support-third-600: #d89d26;
+    --color-support-third-700: #b57d1a;
+    --color-support-third-800: #925f10;
+    --color-support-third-900: #78490a;
+
+    --color-support-fourth-050: #fcfef0;
+    --color-support-fourth-100: #f3fbd9;
+    --color-support-fourth-200: #e4f8b5;
+    --color-support-fourth-300: #caec8c;
+    --color-support-fourth-400: #aed96a;
+    --color-support-fourth-500: #88c13e;
+    --color-support-fourth-600: #6ca52d;
+    --color-support-fourth-700: #528a1f;
+    --color-support-fourth-800: #3b6f13;
+    --color-support-fourth-900: #2b5c0b;
+
+    --color-support-fifth-050: #fefbf5;
+    --color-support-fifth-100: #fcf1e5;
+    --color-support-fifth-200: #fae1cc;
+    --color-support-fifth-300: #f0c7ae;
+    --color-support-fifth-400: #e2ac94;
+    --color-support-fifth-500: #d08770;
+    --color-support-fifth-600: #b26251;
+    --color-support-fifth-700: #954138;
+    --color-support-fifth-800: #782523;
+    --color-support-fifth-900: #631519;
+}

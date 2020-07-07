@@ -16,7 +16,7 @@
 </template>
 
 <script>
-    import Navbar from '../global-components/Navbar';
+    import Navbar from '../components/Navbar';
 
     export default {
         name: "Header",

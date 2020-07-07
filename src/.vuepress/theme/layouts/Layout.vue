@@ -1,5 +1,5 @@
 <template>
-    <div :class="$site.themeConfig.theme" class="min-w-3xs bg-neutral-300 font-sans min-h-screen">
+    <div :class="$site.themeConfig.theme" class="flex flex-col min-w-3xs bg-neutral-300 font-sans min-h-screen">
         <Header />
         
     </div>
@@ -14,6 +14,6 @@
 </script>
 
 <style lang="css">
-@import "../styles/app.css";
+    @import "../styles/app.css";
 </style>
 

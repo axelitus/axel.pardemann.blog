@@ -1,12 +1,13 @@
 <template>
     <nav>
         <div class="flex justify-between">
+            <!-- Logo and Name -->
             <div class="flex items-center">
                 <a href="/" class="items-baseline text-neutral-400 tracking-tighter no-underline text-2xl antialiased hover:translateY-1px hover:transition-1s">
-                    <img class="inline-block lg:hidden h-12 w-auto" src="../public/img/runestone.svg" alt="Axel Pardemann"/>
-                    <img class="hidden lg:inline-block h-12 w-auto" src="../public/img/runestone.svg" alt="Axel Pardemann"/>
+                    <img class="inline-block lg:hidden h-12 w-auto" src="../public/img/runestone.svg" alt="Axel Pardemann" />
+                    <img class="hidden lg:inline-block h-12 w-auto" src="../public/img/runestone.svg" alt="Axel Pardemann" />
                     {{ $site.themeConfig.nav.title }}
-                    <span class="font-semibold text-primary-500">{{ $site.themeConfig.nav.subtitle }}</span>
+                    <span class="font-semibold">{{ $site.themeConfig.nav.subtitle }}</span>
                 </a>
             </div>
 
@@ -24,8 +25,7 @@
 
         <!-- Mobile menu button -->
         <div class="-mt-10 -mr-2 flex justify-end block md:hidden">
-            <button
-                    class="inline-flex items-center justify-center p-2 rounded-md text-neutral-400 hover:text-primary-300 hover:bg-neutral-800 focus:outline-none focus:bg-neutral-800 focus:text-primary-700 transition duration-150 ease-in-out"
+            <button class="inline-flex items-center justify-center p-2 rounded-md text-neutral-400 hover:text-primary-300 hover:bg-neutral-800 focus:outline-none focus:bg-neutral-800 focus:text-primary-700 transition duration-150 ease-in-out"
                     :class="open ? 'bg-neutral-800' : ''"
                     aria-label="Main menu"
                     :aria-expanded="open ? 'true' : 'false'"
@@ -33,11 +33,11 @@
             >
                 <!-- Icon when menu is closed. -->
                 <svg v-show="!open" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
                 <!-- Icon when menu is open. -->
                 <svg v-show="open" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>

@@ -1,3 +1,4 @@
-# Hi
-
-Hi there, world!
+---
+title: Home
+layout: Home
+---

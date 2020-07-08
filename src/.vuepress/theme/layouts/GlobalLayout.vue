@@ -1,22 +1,25 @@
 <template>
     <div :class="$site.themeConfig.theme" class="flex flex-col min-w-3xs bg-neutral-300 font-sans min-h-screen">
-        <Header />
-        <div class="flex-grow w-3/4 my-2 mx-auto p-2">
+        <app-header />
+        <main class="flex-grow w-3/4 my-2 mx-auto p-2">
             <component :is="layout" />
-        </div>
-        <Footer :links="$site.themeConfig.nav.links" />
+        </main>
+        <app-footer :links="$site.themeConfig.nav.links" />
     </div>
 </template>
 
 <script>
     import Vue from 'vue'
     import {setGlobalInfo} from '@vuepress/core/lib/client/util'
-    import Header from "../components/Header";
-    import Footer from "../components/Footer";
+    import AppHeader from "../components/layout/Header";
+    import AppFooter from "../components/layout/Footer";
 
     export default {
         name: 'GlobalLayout',
-        components: {Footer, Header},
+        components: {
+            AppHeader,
+            AppFooter
+        },
         computed: {
             layout() {
                 const layout = this.getLayout()

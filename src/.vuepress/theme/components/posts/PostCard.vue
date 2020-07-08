@@ -16,7 +16,7 @@
             <p class="text-justify">{{ post.frontmatter.description }}</p>
         </div>
         <div class="text-right">
-            <a class="text-sm text-neutral-400 hover:text-primary-300" href="#">Continue reading →</a>
+            <a class="text-sm text-neutral-400 hover:text-primary-500" href="#">Continue reading →</a>
         </div>
     </article>
 </template>

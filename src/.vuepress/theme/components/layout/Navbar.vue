@@ -4,8 +4,8 @@
             <!-- Logo and Name -->
             <div class="flex items-center">
                 <a href="/" class="items-baseline text-neutral-400 tracking-tighter no-underline text-2xl antialiased hover:translateY-1px hover:transition-1s">
-                    <img class="inline-block lg:hidden h-12 w-auto" src="../../public/img/runestone.svg" alt="Axel Pardemann" />
-                    <img class="hidden lg:inline-block h-12 w-auto" src="../../public/img/runestone.svg" alt="Axel Pardemann" />
+                    <img class="inline-block lg:hidden h-12 w-auto" src="@theme/assets/img/runestone.svg" alt="Axel Pardemann" />
+                    <img class="hidden lg:inline-block h-12 w-auto" src="@theme/assets/img/runestone.svg" alt="Axel Pardemann" />
                     {{ $site.themeConfig.nav.title }}
                     <span class="font-semibold">{{ $site.themeConfig.nav.subtitle }}</span>
                 </a>

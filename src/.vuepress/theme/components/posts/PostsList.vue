@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import AppPostCard from './PostCard'
+    import AppPostCard from '@theme/components/posts/PostCard'
 
     export default {
         name: "PostsList",

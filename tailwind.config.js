@@ -115,7 +115,11 @@ module.exports = {
                 '72': '18rem',
                 '84': '21rem',
                 '96': '24rem',
-            }
+            },
+            transitionTimingFunction:{
+                'ease-in-quad': 'cubic-bezier(0.11, 0, 0.5, 0)',
+                'ease-out-quad': 'cubic-bezier(0.5, 1, 0.89, 1)'
+            },
         },
     },
     variants: {},

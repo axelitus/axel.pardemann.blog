@@ -30,6 +30,7 @@
     "moment": "^2.27.0",
     "postcss-import": "^12.0.1",
     "tailwindcss": "^1.4.6",
+    "v-clipboard": "^2.2.3",
     "vuepress": "^1.5.2"
   }
 }

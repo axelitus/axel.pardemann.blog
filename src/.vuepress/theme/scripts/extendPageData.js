@@ -3,7 +3,6 @@ module.exports = {
         ensurePageHasFrontmatter(page)
         classify(page)
         setIsoDate(page)
-        setFormattedDate(page)
     }
 }
 
@@ -23,8 +22,4 @@ function classify(page) {
 
 function setIsoDate(page) {
     page.isoDate = page.frontmatter.date    
-}
-
-function setFormattedDate(page) {
-    page.formattedDate = page.isoDate
 }

@@ -23,7 +23,7 @@
         components: {
             AppNavbar,
         },
-        data: () => {
+        data() {
             return {}
         },
     }

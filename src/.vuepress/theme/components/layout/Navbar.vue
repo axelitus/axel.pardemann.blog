@@ -67,7 +67,7 @@
                 required: true,
             }
         },
-        data: () => {
+        data() {
             return {
                 open: false,
             }

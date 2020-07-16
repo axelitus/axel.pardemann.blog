@@ -1,4 +1,5 @@
 const {description} = require('../../package')
+const twemoji = require('twemoji')
 
 module.exports = {
     title: "Axel Pardemann Blog",
@@ -39,11 +40,6 @@ module.exports = {
 
     markdown: {
         extendMarkdown: (md) => {
-            md.set({
-                html: true,
-                linkify: true,
-                typographer: true,
-            })
             md.use(require('markdown-it-abbr'))
             md.use(require('markdown-it-container'))
             md.use(require('markdown-it-deflist'))
@@ -53,6 +49,16 @@ module.exports = {
             md.use(require('markdown-it-mark'))
             md.use(require('markdown-it-sub'))
             md.use(require('markdown-it-sup'))
+
+            md.set({
+                html: true,
+                linkify: true,
+                typographer: true,
+            })
+
+            md.renderer.rules.emoji = function (token, idx) {
+                return twemoji.parse(token[idx].content);
+            }
         },
         lineNumbers: true,
     },

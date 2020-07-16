@@ -19,6 +19,20 @@ code {
     background-size: 2000px auto;
 }
 
+.prose {
+    .emoji {
+        @apply inline m-0 h-4;
+    }
+}
+
+@screen lg {
+    .prose {
+        .emoji {
+            @apply h-6;
+        }
+    }
+}
+
 .title\-highlight {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(62%, transparent), color-stop(62%, var(--color-primary-900)), color-stop(85%, var(--color-primary-900)), color-stop(85%, transparent));
     background-image: linear-gradient(to bottom, transparent 62%, var(--color-primary-900) 62%, var(--color-primary-900) 85%, transparent 85%);

@@ -36,4 +36,15 @@ module.exports = {
             require('tailwindcss'),
         ]
     },
+
+    markdown: {
+        extendMarkdown: (md) => {
+            md.set({
+                html: true,
+                linkify: true,
+                typographer: true,
+            })
+        },
+        lineNumbers: true,
+    },
 }

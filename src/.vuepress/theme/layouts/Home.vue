@@ -1,18 +1,17 @@
 <template>
     <div>
-        <app-posts-list :posts="$pinnedPosts" />
+        <app-posts-list :posts="$featuredPosts" />
         <app-posts-list :posts="$regularPosts" />
     </div>
 </template>
 
 <script>
-    import onlyPosts from "@theme/scripts/utils"
-    import AppPostsList from "../components/posts/PostsList";
+    import AppPostsList from "@theme/components/posts/PostsList";
 
     export default {
         name: "Home",
         components: {
-            AppPostsList
+            AppPostsList,
         },
     }
 </script>

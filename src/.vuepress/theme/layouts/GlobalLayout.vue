@@ -1,5 +1,5 @@
 <template>
-    <div :class="$site.themeConfig.theme" class="flex flex-col min-w-3xs bg-neutral-300 font-sans min-h-screen">
+    <div :class="$site.themeConfig.theme" class="flex flex-col min-h-screen min-w-3xs bg-neutral-300 font-sans">
         <app-header />
         <main class="flex-grow w-3/4 my-2 mx-auto p-2">
             <component :is="layout" />
@@ -9,10 +9,10 @@
 </template>
 
 <script>
-    import Vue from 'vue'
     import {setGlobalInfo} from '@vuepress/core/lib/client/util'
-    import AppHeader from "../components/layout/Header";
+    import Vue from 'vue'
     import AppFooter from "../components/layout/Footer";
+    import AppHeader from "../components/layout/Header";
 
     export default {
         name: 'GlobalLayout',
@@ -42,8 +42,3 @@
         }
     }
 </script>
-
-<style lang="css">
-    @import "../styles/app.css";
-</style>
-

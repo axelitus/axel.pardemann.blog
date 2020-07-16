@@ -1,0 +1,11 @@
+.post-display {
+    @apply bg-neutral-050 rounded shadow-lg;
+    
+    .post-content {
+        @apply my-2 p-4;
+    }
+
+    .header-anchor {
+        @apply hidden;
+    }
+}

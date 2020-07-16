@@ -1,13 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import "themes/default.css";
-@import "themes/nord.css";
+@import "fonts.scss";
+@import "themes.scss";
 
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;
 /* purgecss end ignore */
 
+@import "components.scss";
+
 @tailwind utilities;
+
+code {
+    @apply font-code;
+}
 
 .bg\-shapes {
     background-image: url('../assets/img/bg-shapes.svg');

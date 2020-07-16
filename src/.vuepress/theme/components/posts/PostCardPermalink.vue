@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <span>
         <a class="cursor-pointer hover:text-primary-300"
            v-clipboard="fullQualifiedPermalink"
            v-clipboard:success="clipboardSuccessHandler"
@@ -19,7 +19,7 @@
         >
             <span class="text-support-fourth-400" v-show="showCopiedMessage">- copied!</span>
         </transition>
-    </div>
+    </span>
 </template>
 
 <script>

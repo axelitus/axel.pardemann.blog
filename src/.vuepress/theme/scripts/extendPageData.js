@@ -3,6 +3,7 @@ module.exports = {
         ensurePageHasFrontmatter(page)
         classify(page)
         setIsoDate(page)
+        renderTitle(page)
     }
 }
 
@@ -13,13 +14,21 @@ function ensurePageHasFrontmatter(page) {
 }
 
 function classify(page) {
+    page.isFeatured = page.frontmatter.featured === true
     page.isHome = page.regularPath === '/'
     page.isPage = page.regularPath.startsWith('/pages/') && page.regularPath !== '/pages/'
-    page.isPinned = page.frontmatter.pinned === true
     page.isPost = page.regularPath.startsWith('/posts/') && page.regularPath !== '/posts/'
     page.isTag = page.regularPath.startsWith('/tags/') && page.regularPath !== '/tags/'
 }
 
+function renderTitle(page) {
+    if (typeof page.title !== 'string') {
+        return
+    }
+    
+    page.renderedTitle = page._context.markdown.render(page.title)['html'].replace(/(<([^>]+)>)/ig, '')
+}
+
 function setIsoDate(page) {
-    page.isoDate = page.frontmatter.date    
+    page.isoDate = page.frontmatter.date
 }

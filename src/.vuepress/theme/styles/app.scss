@@ -10,16 +10,15 @@
 
 @tailwind utilities;
 
-code {
-    @apply font-code;
-}
-
 .bg\-shapes {
     background-image: url('../assets/img/bg-shapes.svg');
     background-size: 2000px auto;
 }
 
 .prose {
+    img {
+        @apply inline;
+    }
     .emoji {
         @apply inline m-0 h-4;
     }

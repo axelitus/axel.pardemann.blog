@@ -1,131 +1,52 @@
-.theme-default-content code {
-    color: #476582;
-    padding: 0.25rem 0.5rem;
-    margin: 0;
-    font-size: 0.85em;
-    background-color: rgba(27,31,35,0.05);
-    border-radius: 3px;
-}
-
-.theme-default-content code .token.deleted {
-    color: #ec5975;
-}
-
-.theme-default-content code .token.inserted {
-    color: #3eaf7c;
-}
-
-.theme-default-content pre,
-.theme-default-content pre[class*="language-"] {
-    line-height: 1.4;
-    padding: 1.25rem 1.5rem;
-    margin: 0.85rem 0;
-    background-color: #282c34;
-    border-radius: 6px;
-    overflow: auto;
-}
-
-.theme-default-content pre code,
-.theme-default-content pre[class*="language-"] code {
-    color: #fff;
-    padding: 0;
-    background-color: transparent;
-    border-radius: 0;
-}
-
 div[class*="language-"] {
-    position: relative;
-    background-color: #282c34;
-    border-radius: 6px;
-}
+    @apply relative rounded-lg;
+    background: rgb(45, 55, 72); // TODO: change to nordtheme color
 
-div[class*="language-"] .highlight-lines {
-    user-select: none;
-    padding-top: 1.3rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    line-height: 1.4;
-}
+    &:before {
+        @apply absolute font-fira-sans text-xs z-50;
+        color: rgba(255, 255, 255, 0.4); // TODO: change to nordtheme color
+        top: 0.25rem;
+        right: 0.4rem;
+    }
 
-div[class*="language-"] .highlight-lines .highlighted {
-    background-color: rgba(0,0,0,0.66);
-}
+    pre, pre[class*="language-"] {
+        @apply relative m-0 bg-transparent font-fira-code leading-loose cursor-text z-20;
+        code {
+            @apply relative inline-block mt-4;
 
-div[class*="language-"] pre,
-div[class*="language-"] pre[class*="language-"] {
-    background: transparent;
-    position: relative;
-    z-index: 1;
-}
+            &:before {
+                content: '';
+                @apply absolute top-0 w-3 select-none;
+                left: 100%;
+                height: 1px;
+            }
+        }
+    }
 
-div[class*="language-"]::before {
-    position: absolute;
-    z-index: 3;
-    top: 0.8em;
-    right: 1em;
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.4);
-}
+    .highlight-lines {
+        @apply absolute top-0 left-0 pt-6 pb-2 w-full leading-loose select-none text-xs z-10;
 
-div[class*="language-"]:not(.line-numbers-mode) .line-numbers-wrapper {
-    display: none;
-}
+        .highlighted {
+            background-color: rgba(0, 0, 0, 0.66); // TODO: change to nordtheme color
+        }
+    }
 
-div[class*="language-"].line-numbers-mode .highlight-lines .highlighted {
-    position: relative;
-}
+    .line-numbers-wrapper {
+        @apply hidden;
+    }
 
-div[class*="language-"].line-numbers-mode .highlight-lines .highlighted:before {
-    content: ' ';
-    position: absolute;
-    z-index: 3;
-    left: 0;
-    top: 0;
-    display: block;
-    width: 3.5rem;
-    height: 100%;
-    background-color: rgba(0,0,0,0.66);
-}
+    &.line-numbers-mode {
+        pre {
+            @apply ml-12 pl-2 align-middle;
+        }
 
-div[class*="language-"].line-numbers-mode pre {
-    padding-left: 4.5rem;
-    vertical-align: middle;
-}
-
-div[class*="language-"].line-numbers-mode .line-numbers-wrapper {
-    position: absolute;
-    top: 0;
-    width: 3.5rem;
-    text-align: center;
-    color: rgba(255,255,255,0.3);
-    padding: 1.25rem 0;
-    line-height: 1.4;
-}
-
-div[class*="language-"].line-numbers-mode .line-numbers-wrapper br {
-    user-select: none;
-}
-
-div[class*="language-"].line-numbers-mode .line-numbers-wrapper .line-number {
-    position: relative;
-    z-index: 4;
-    user-select: none;
-    font-size: 0.85em;
-}
-
-div[class*="language-"].line-numbers-mode::after {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 3.5rem;
-    height: 100%;
-    border-radius: 6px 0 0 6px;
-    border-right: 1px solid rgba(0,0,0,0.66);
-    background-color: #282c34;
+        .line-numbers-wrapper {
+            @apply absolute top-0 w-12 h-full p-2 pt-6 block rounded-l border-r border-neutral-900;
+            @apply font-fira-sans font-medium text-center select-none z-30;
+            color: rgba(255, 255, 255, 0.3); // TODO: change to nordtheme color
+            //background: rgb(45, 55, 72); // TODO: change to nordtheme color
+        }
+    }
 }
 
 div[class~="language-js"]:before {
@@ -238,6 +159,68 @@ div[class~="language-bash"]:before {
 
 div[class~="language-php"]:before {
     content: "php";
+}
+
+@screen sm {
+    div[class*="language-"] {
+    }
+}
+
+@screen md {
+    div[class*="language-"] {
+        &:before {
+            @apply text-sm;
+            right: 0.45rem;
+        }
+
+        .highlight-lines {
+            @apply pt-7 pb-3 text-sm;
+        }
+
+        &.line-numbers-mode {
+            .line-numbers-wrapper {
+                @apply pt-7;
+            }
+        }
+    }
+}
+
+@screen lg {
+    div[class*="language-"] {
+        &:before {
+            @apply text-base;
+            right: 0.5rem;
+        }
+
+        .highlight-lines {
+            @apply pt-8 pb-4 text-base;
+        }
+
+        &.line-numbers-mode {
+            .line-numbers-wrapper {
+                @apply pt-8;
+            }
+        }
+    }
+}
+
+@screen xl {
+    div[class*="language-"] {
+        &:before {
+            @apply text-lg;
+            right: 0.6rem;
+        }
+
+        .highlight-lines {
+            @apply pt-9 pb-5 text-lg;
+        }
+
+        &.line-numbers-mode {
+            .line-numbers-wrapper {
+                @apply pt-9;
+            }
+        }
+    }
 }
 
 @import "prism-nord";

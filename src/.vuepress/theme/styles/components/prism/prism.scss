@@ -2,6 +2,7 @@ div[class*="language-"] {
     @apply relative rounded-lg;
     background: rgb(45, 55, 72); // TODO: change to nordtheme color
 
+    // Language display
     &:before {
         @apply absolute font-fira-sans text-xs z-50;
         color: rgba(255, 255, 255, 0.4); // TODO: change to nordtheme color
@@ -9,9 +10,10 @@ div[class*="language-"] {
         right: 0.4rem;
     }
 
+    // Code content
     pre, pre[class*="language-"] {
         @apply relative m-0 bg-transparent font-fira-code leading-loose cursor-text z-20;
-        code {
+        code, code[class*="language-"] {
             @apply relative inline-block mt-4;
 
             &:before {
@@ -23,6 +25,7 @@ div[class*="language-"] {
         }
     }
 
+    // Line highlighting
     .highlight-lines {
         @apply absolute top-0 left-0 pt-6 pb-2 w-full leading-loose select-none text-xs z-10;
 
@@ -31,6 +34,7 @@ div[class*="language-"] {
         }
     }
 
+    // Line numbers
     .line-numbers-wrapper {
         @apply hidden;
     }
@@ -44,7 +48,6 @@ div[class*="language-"] {
             @apply absolute top-0 w-12 h-full p-2 pt-6 block rounded-l border-r border-neutral-900;
             @apply font-fira-sans font-medium text-center select-none z-30;
             color: rgba(255, 255, 255, 0.3); // TODO: change to nordtheme color
-            //background: rgb(45, 55, 72); // TODO: change to nordtheme color
         }
     }
 }

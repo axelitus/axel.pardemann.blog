@@ -1,67 +1,39 @@
-/* Generated with http://k88hudson.github.io/syntax-highlighting-theme-generator/www */
+div[class*="language-"] {
+    background: #2e3440;
+    
+    // Language display
+    &:before {
+        color: #616e88;
+    }
 
-/*********************************************************
-* General
-*/
-pre[class*="language-"] {
-    border-radius: 8px;
-    box-shadow: rgba(184, 194, 215, 0.25) 0px 4px 6px,
-    rgba(184, 194, 215, 0.1) 0px 5px 7px;
-}
+    // Code content
+    pre, pre[class*="language-"] {
+        code, code[class*="language-"] {
+            color: #eceff4;
+        }
+    }
 
-pre[class*="language-"],
-code[class*="language-"] {
-    padding: 1.25rem 0;
-    color: #d8dee9;
-    font-size: 1em;
-    text-shadow: none;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    line-height: 1.5;
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-}
 
-pre[class*="language-"]::selection,
-code[class*="language-"]::selection,
-pre[class*="language-"]::mozselection,
-code[class*="language-"]::mozselection {
-    text-shadow: none;
-    background: none;
-}
+    // Line highlighting
+    .highlight-lines {
+        .highlighted {
+            background: #3b4252;
+            box-shadow: inset 5px 0 0 #88c0d0;
+        }
+    }
 
-@media print {
-    pre[class*="language-"],
-    code[class*="language-"] {
-        text-shadow: none;
+    // Line numbers
+    &.line-numbers-mode {
+        .line-numbers-wrapper {
+            @apply border-0 border-transparent;
+            color: #4c566a;
+        }
     }
 }
 
-pre[class*="language-"] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-    background: #2e3440;
-}
-
-:not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-    color: #d8dee9;
-    background: #2e3440;
-}
-
-/*********************************************************
-* Tokens
-*/
+/**
+ * Tokens
+ */
 .namespace {
     opacity: 0.7;
 }
@@ -70,11 +42,11 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: #606e87;
+    color: #616e88;
 }
 
 .token.punctuation {
-    color: #81a1c1;
+    color: #eceff4;
 }
 
 .token.property,
@@ -93,32 +65,36 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-    color: #a2bf8c;
+    color: #a3be8c;
 }
 
 .token.operator,
 .token.entity,
+.token.keyword,
 .token.url,
 .language-css .token.string,
 .style .token.string {
-    color: #80a2c1;
+    color: #81a1c1;
     background: none;
 }
 
 .token.atrule,
-.token.attr-value,
-.token.keyword {
-    color: #81a1c1;
+.token.attr-value {
+    color: #d08770;
 }
 
 .token.function {
-    color: #8fbcbc;
+    color: #88c0d0;
 }
 
 .token.regex,
 .token.important,
+{
+    color: #ebcb8b;
+}
+
 .token.variable {
-    color: #ee9900;
+    color: #d8dee9;
 }
 
 .token.important,
@@ -132,49 +108,4 @@ pre[class*="language-"] {
 
 .token.entity {
     cursor: help;
-}
-
-/*********************************************************
-* Line highlighting
-*/
-pre[data-line] {
-    position: relative;
-}
-
-pre[class*="language-"] > code[class*="language-"] {
-    position: relative;
-    z-index: 1;
-}
-
-.line-highlight {
-    position: absolute;
-    left: 0;
-    right: 0;
-    padding: inherit 0;
-    margin-top: 1em;
-    background: #3b4251;
-    box-shadow: inset 5px 0 0 #d8dee9;
-    z-index: 0;
-    pointer-events: none;
-    line-height: inherit;
-    white-space: pre;
-}
-
-/*********************************************************
-* Line numbers
-*/
-pre[class*="language-"].line-numbers {
-    padding-left: 2.8em;
-}
-
-span.line-numbers-rows {
-    padding: 1em 0.5em;
-}
-
-pre.line-numbers > span.line-numbers-rows {
-    border-right: 0;
-}
-
-span.line-numbers-rows > span:before {
-    color: #4c566a;
 }

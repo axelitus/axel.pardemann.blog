@@ -1,5 +1,5 @@
 <template>
-    <article class="my-8 px-3 py-2 bg-neutral-050 rounded shadow-lg">
+    <article class="post-card my-8 px-3 py-2 bg-neutral-050 rounded shadow-lg">
         <header class="relative mb-1">
             <span class="absolute top-0 right-0" v-if="post.isFeatured">
                 <svg class="text-support-fifth-500 h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
@@ -8,7 +8,7 @@
                 </svg>
             </span>
             <h2 class="border-b-4 border-neutral-300">
-                <a class="font-semibold text-xl xl:text-2xl text-neutral-600 hover:text-primary-800" :href="post.path">{{ post.renderedTitle }}</a>
+                <a v-html="post.renderedTitle" class="font-semibold text-xl xl:text-2xl text-neutral-600 hover:text-primary-800" :href="post.path" />
             </h2>
             <div class="flex flex-col md:flex-row justify-between mt-1 text-sm text-neutral-400">
                 <div>

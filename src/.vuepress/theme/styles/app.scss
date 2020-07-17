@@ -15,19 +15,52 @@
     background-size: 2000px auto;
 }
 
+.emoji {
+    @apply inline;
+}
+
+.post-card {
+    h2 {
+        .emoji {
+            @apply h-5;
+        }
+    }
+}
+
 .prose {
     img {
         @apply inline;
     }
+
     .emoji {
-        @apply inline m-0 h-4;
+        @apply m-0 h-4;
+    }
+
+    .post-display-title {
+        .emoji {
+            @apply m-0 h-8;
+        }
     }
 }
 
 @screen lg {
+    .post-card {
+        h2 {
+            .emoji {
+                @apply h-6;
+            }
+        }
+    }
+    
     .prose {
         .emoji {
             @apply h-6;
+        }
+
+        .post-display-title {
+            .emoji {
+                @apply m-0 h-12;
+            }
         }
     }
 }

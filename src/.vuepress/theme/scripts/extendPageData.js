@@ -1,3 +1,5 @@
+const twemoji = require('twemoji')
+
 module.exports = {
     extendPageData(page) {
         ensurePageHasFrontmatter(page)
@@ -26,7 +28,8 @@ function renderTitle(page) {
         return
     }
     
-    page.renderedTitle = page._context.markdown.render(page.title)['html'].replace(/(<([^>]+)>)/ig, '')
+    page.renderedTitle = twemoji.parse(page._context.markdown.render(page.title)['html'])
+        .replace(/(<(\/?[p|div|h\d]+)>)/ig, '')
 }
 
 function setIsoDate(page) {

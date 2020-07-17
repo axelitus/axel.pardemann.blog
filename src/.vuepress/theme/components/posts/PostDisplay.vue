@@ -15,9 +15,7 @@
                     </svg>
                 </span>
                 <div class="prose prose-sm max-w-none md:prose md:max-w-none lg:prose-lg xl:prose-xl">
-                    <h1 class="inline-block border-b-4 border-neutral-300 mr-8">
-                        {{ post.renderedTitle }}
-                    </h1>
+                    <h1 v-html="post.renderedTitle" class="post-display-title inline-block border-b-4 border-neutral-300 mr-8" />
                 </div>
                 <div class="flex flex-col md:flex-row justify-between mt-1 text-sm text-neutral-400">
                     <div>

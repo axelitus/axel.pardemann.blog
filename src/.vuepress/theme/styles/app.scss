@@ -10,6 +10,14 @@
 
 @tailwind utilities;
 
+:not(pre) > code {
+    @apply rounded p-1 bg-neutral-200 font-fira-code font-medium text-support-second-500 #{!important};
+
+    &:before, &:after {
+        @apply hidden;
+    }
+}
+
 .bg\-shapes {
     background-image: url('../assets/img/bg-shapes.svg');
     background-size: 2000px auto;
@@ -51,7 +59,7 @@
             }
         }
     }
-    
+
     .prose {
         .emoji {
             @apply h-6;

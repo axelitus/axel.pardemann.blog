@@ -10,6 +10,14 @@
 
 @tailwind utilities;
 
+:not(pre) > code {
+    @apply rounded p-1 bg-neutral-200 font-fira-code font-medium text-support-second-500 #{!important};
+
+    &:before, &:after {
+        @apply hidden;
+    }
+}
+
 mark {
     @apply text-neutral-800 bg-support-third-300;
 }
@@ -55,7 +63,7 @@ mark {
             }
         }
     }
-    
+
     .prose {
         .emoji {
             @apply h-6;

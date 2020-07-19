@@ -24,20 +24,25 @@
                     <app-post-tags-list :tags="post.frontmatter.tags" />
                 </div>
             </header>
+            <div class="text-xs lg:text-sm text-neutral-350 text-right">
+                <app-date-display :date="post.lastUpdated" :show-relative="true" prefix="Last updated: " />
+            </div>
             <Content class="post-content prose prose-sm max-w-none md:prose md:max-w-none lg:prose-lg xl:prose-xl" />
         </article>
     </div>
 </template>
 
 <script>
-    import AppPostCardPermalink from "@theme/components/posts/PostCardPermalink";
+    import AppPostCardPermalink from "@theme/components/posts/PostCardPermalink"
     import AppPostTagsList from "@theme/components/posts/PostTagsList"
+    import AppDateDisplay from "@theme/components/general/DateDisplay"
 
     export default {
         name: "PostDisplay",
         components: {
             AppPostCardPermalink,
             AppPostTagsList,
+            AppDateDisplay,
         },
         props: {
             post: {

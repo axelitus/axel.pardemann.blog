@@ -1,6 +1,6 @@
 import moment from 'moment-timezone'
 
-export const formatDate = (date) => moment(date).format('lll')
+export const formatDate = (date, format = 'lll') => moment(date).format(format)
 
 export const onlyPosts = (pages) => pages.filter(page => page.isPublished && page.isPost)
 

@@ -13,6 +13,7 @@ module.exports = {
             'neutral-100': 'var(--color-neutral-100)',
             'neutral-200': 'var(--color-neutral-200)',
             'neutral-300': 'var(--color-neutral-300)',
+            'neutral-350': 'var(--color-neutral-350)',
             'neutral-400': 'var(--color-neutral-400)',
             'neutral-500': 'var(--color-neutral-500)',
             'neutral-600': 'var(--color-neutral-600)',

@@ -17,6 +17,9 @@
                 <app-post-tags-list :tags="post.frontmatter.tags" />
             </div>
         </header>
+        <div class="text-xs lg:text-sm text-neutral-350 text-right">
+            <app-date-display :date="post.lastUpdated" :show-relative="true" prefix="Last updated: " />
+        </div>
         <div class="mt-3 mb-2 text-neutral-600">
             <div v-html="excerpt" class="prose prose-sm max-w-none md:prose md:max-w-none lg:prose-lg xl:prose-xl" />
         </div>
@@ -34,12 +37,14 @@
 <script>
     import AppPostCardPermalink from "@theme/components/posts/PostCardPermalink";
     import AppPostTagsList from "@theme/components/posts/PostTagsList"
+    import AppDateDisplay from "@theme/components/general/DateDisplay"
 
     export default {
         name: "PostCard",
         components: {
             AppPostCardPermalink,
             AppPostTagsList,
+            AppDateDisplay,
         },
         computed: {
             excerpt() {

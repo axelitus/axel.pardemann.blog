@@ -1,11 +1,28 @@
 .post-display {
     @apply bg-neutral-050 rounded shadow-lg;
-    
+
     .post-content {
         @apply my-2 p-4;
     }
 
-    .header-anchor {
-        @apply hidden;
+    h1, h2, h3, h4, h5, h6 {
+        @apply relative;
+        .header-anchor {
+            @apply absolute text-neutral-200 no-underline;
+            font-size: .85em;
+            margin-left: -.87em;
+            padding-right: .23em;
+            margin-top: .125em;
+        }
+
+        &:hover > .header-anchor {
+            @apply text-support-first-400;
+        }
+    }
+    
+    h1 {
+        .header-anchor {
+            margin-left: -.73em;
+        }
     }
 }

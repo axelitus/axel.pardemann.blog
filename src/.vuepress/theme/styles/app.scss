@@ -10,6 +10,15 @@
 
 @tailwind utilities;
 
+abbr {
+    @apply cursor-help border-support-fifth-500 text-support-fifth-500 no-underline border-b border-dotted border-support-fifth-500 #{!important};
+
+    &:after {
+        @apply inline-block w-4;
+        content: url('../assets/img/annotation.svg');
+    }
+}
+
 :not(pre) > code {
     @apply rounded p-1 bg-neutral-200 font-fira-code font-medium text-support-second-500 #{!important};
 

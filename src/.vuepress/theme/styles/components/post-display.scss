@@ -1,11 +1,17 @@
 .post-display {
     @apply bg-neutral-050 rounded shadow-lg;
-    
+
     .post-content {
         @apply my-2 p-4;
     }
 
-    .header-anchor {
-        @apply hidden;
+    h1, h2, h3, h4, h5, h6 {
+        .header-anchor {
+            @apply text-neutral-200 no-underline;
+        }
+
+        &:hover > .header-anchor {
+            @apply text-support-first-400;
+        }
     }
 }

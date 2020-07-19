@@ -1,5 +1,5 @@
 <template>
-    <article class="post-card my-8 px-3 py-2 bg-neutral-050 rounded shadow-lg">
+    <article class="post-card my-8 px-4 lg:px-6 pt-2 pb-4 lg:pt-4 bg-neutral-050 rounded shadow-lg">
         <header class="relative mb-1">
             <div class="flex items-center justify-between pb-1 border-b-4 border-neutral-300">
                 <h2 class="font-semibold text-xl xl:text-2xl ">

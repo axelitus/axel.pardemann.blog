@@ -18,6 +18,10 @@
     }
 }
 
+mark {
+    @apply text-neutral-800 bg-support-third-300;
+}
+
 .bg\-shapes {
     background-image: url('../assets/img/bg-shapes.svg');
     background-size: 2000px auto;

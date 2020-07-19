@@ -14,7 +14,7 @@
             <!-- Normal Menu -->
             <div class="font-medium antialiased hidden md:block">
                 <a v-for="(link, index) in links"
-                   :class="index === 0 ? '': 'ml-4'"
+                   :class="index === 0 ? '': 'ml-2 lg:ml-4'"
                    class="inline-block text-neutral-400 hover:text-primary-300 hover:bg-neutral-800 rounded p-3 no-underline"
                    v-bind="link.attrs"
                 >

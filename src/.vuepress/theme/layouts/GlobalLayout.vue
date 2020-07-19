@@ -1,7 +1,7 @@
 <template>
     <div :class="$site.themeConfig.theme" class="flex flex-col min-h-screen min-w-3xs bg-neutral-300 font-sans">
         <app-header />
-        <main class="flex-grow w-3/4 my-2 mx-auto p-2">
+        <main class="flex-grow w-11/12 md:w-5/6 lg:w-3/4 my-2 mx-auto px-0 sm:px-2">
             <component :is="layout" />
         </main>
         <app-footer :links="$site.themeConfig.nav.links" />

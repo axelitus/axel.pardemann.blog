@@ -12,7 +12,7 @@
             </div>
             <div class="flex flex-col md:flex-row justify-between mt-1 text-sm text-neutral-400">
                 <div>
-                    <app-post-card-permalink :date="post.isoDate" :permalink="post.frontmatter.permalink" />
+                    <app-post-card-permalink :date="post.published_at" :permalink="post.frontmatter.permalink" />
                 </div>
                 <app-post-tags-list :tags="post.frontmatter.tags" />
             </div>

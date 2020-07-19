@@ -4,6 +4,7 @@ module.exports = {
     extendPageData(page) {
         ensurePageHasFrontmatter(page)
         classify(page)
+        prefixPermalinks(page)
         setIsoDate(page)
         renderTitle(page)
     }
@@ -23,11 +24,21 @@ function classify(page) {
     page.isTag = page.regularPath.startsWith('/tags/') && page.regularPath !== '/tags/'
 }
 
+function prefixPermalinks(page) {
+    if (page.isPage && !page.frontmatter.permalink.startsWith('pages/')) {
+        page.frontmatter.permalink = 'pages/' + page.frontmatter.permalink
+    }
+
+    if (page.isPost && !page.frontmatter.permalink.startsWith('posts/')) {
+        page.frontmatter.permalink = 'posts/' + page.frontmatter.permalink
+    }
+}
+
 function renderTitle(page) {
     if (typeof page.title !== 'string') {
         return
     }
-    
+
     page.renderedTitle = twemoji.parse(page._context.markdown.render(page.title)['html'])
         .replace(/(<(\/?[p|div|h\d]+)>)/ig, '')
 }

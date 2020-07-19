@@ -6,7 +6,7 @@
             </svg>
             <span>Go back</span>
         </a>
-        <article class="post-display mt-4 mb-8">
+        <article class="post-display mt-4 mb-8 pb-8">
             <header class="relative mx-4 pt-4 pb-2 border-b-4 border-neutral-300">
                 <span class="absolute top-4 right-0 -mr-2" v-if="post.isFeatured">
                     <svg class="text-support-fifth-500 h-8 w-8 lg:h-10 lg:w-10" fill="currentColor" viewBox="0 0 20 20">

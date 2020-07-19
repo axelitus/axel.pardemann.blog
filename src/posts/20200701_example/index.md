@@ -4,8 +4,7 @@ title: "markdown-it example :blush:"
 layout: Post
 description: |
     Example post taken from markdown-it demo page.
-date: 2020-07-01
-published: false
+published_at: 2020-07-01
 featured: true
 tags: []
 ---

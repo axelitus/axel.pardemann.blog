@@ -14,26 +14,7 @@
                 <div>
                     <app-post-card-permalink :date="post.isoDate" :permalink="post.frontmatter.permalink" />
                 </div>
-                <div class="flex mt-1 md:mt-0">
-                    <a class="rounded p-1 bg-neutral-200 hover:bg-support-first-200 text-xs text-neutral-400 hover:text-support-first-600 mr-2 ml-0 md:mr-0 md:ml-2"
-                       href="#"
-                       title="tag: general"
-                    >
-                        <svg class="inline-block h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
-                        </svg>
-                        <span>general</span>
-                    </a>
-                    <a class="rounded p-1 bg-neutral-200 hover:bg-support-first-200 text-xs text-neutral-400 hover:text-support-first-600 mr-2 ml-0 md:mr-0 md:ml-2"
-                       href="#"
-                       title="tag: tech"
-                    >
-                        <svg class="inline-block h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
-                        </svg>
-                        <span>tech</span>
-                    </a>
-                </div>
+                <app-post-tags-list :tags="post.frontmatter.tags" />
             </div>
         </header>
         <div class="mt-3 mb-2 text-neutral-600">
@@ -54,11 +35,13 @@
 
 <script>
     import AppPostCardPermalink from "@theme/components/posts/PostCardPermalink";
+    import AppPostTagsList from "@theme/components/posts/PostTagsList"
 
     export default {
         name: "PostCard",
         components: {
             AppPostCardPermalink,
+            AppPostTagsList,
         },
         props: {
             post: {

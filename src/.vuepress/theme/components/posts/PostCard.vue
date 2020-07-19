@@ -18,9 +18,7 @@
             </div>
         </header>
         <div class="mt-3 mb-2 text-neutral-600">
-            <div class="prose prose-sm max-w-none md:prose md:max-w-none lg:prose-lg xl:prose-xl">
-                {{ post.frontmatter.description }}
-            </div>
+            <div v-html="excerpt" class="prose prose-sm max-w-none md:prose md:max-w-none lg:prose-lg xl:prose-xl" />
         </div>
         <div class="text-right">
             <a class="text-sm text-neutral-400 hover:text-primary-500" :href="post.path">
@@ -42,6 +40,11 @@
         components: {
             AppPostCardPermalink,
             AppPostTagsList,
+        },
+        computed: {
+            excerpt() {
+                return this.post.excerpt === undefined || this.post.excerpt === '' ? this.post.frontmatter.description : this.post.excerpt
+            }
         },
         props: {
             post: {

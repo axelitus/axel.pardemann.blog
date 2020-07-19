@@ -81,6 +81,9 @@ module.exports = {
             'support-fifth-900': 'var(--color-support-fifth-900)',
         },
         extend: {
+            cursor: {
+                help: 'help',
+            },
             screens: {
                 '3xs': '240px',
                 '2xs': '320px',

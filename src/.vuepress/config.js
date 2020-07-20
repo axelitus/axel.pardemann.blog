@@ -17,7 +17,7 @@ module.exports = {
 
     themeConfig: {
         url: 'https://axel.pardemann.blog',
-        theme: 'theme-nord',
+        cssTheme: 'theme-nord',
         nav: {
             title: 'Axel Pardemann',
             subtitle: 'Blog',

@@ -57,8 +57,10 @@
         },
         props: {
             date: {
-                type: String,
                 required: true,
+                validator: (value) => {
+                    return value === false || typeof value === 'string'
+                }
             },
             permalink: {
                 type: String,

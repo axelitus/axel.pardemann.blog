@@ -8,17 +8,22 @@
     export default {
         name: "DateDisplay",
         computed: {
+            hasDate() {
+                return this.date !== false
+            },
             formattedDate() {
-                return formatDate(this.date)
+                return this.hasDate ? formatDate(this.date) : ''
             },
             relativeDate() {
-                return relativeDate(this.date)
+                return this.hasDate ? relativeDate(this.date) : ''
             },
         },
         props: {
             date: {
-                type: String,
                 required: true,
+                validator: (value) => {
+                    return value === false || typeof value === 'string'
+                }
             },
             showRelative: {
                 type: Boolean,

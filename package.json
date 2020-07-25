@@ -19,7 +19,6 @@
     "url": "https://github.com/axelitus/axel.pardemann.blog.git"
   },
   "scripts": {
-    "serve": "vuepress dev src",
     "dev": "vuepress dev src",
     "build": "vuepress build src"
   },

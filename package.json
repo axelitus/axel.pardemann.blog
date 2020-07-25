@@ -46,6 +46,7 @@
         "twemoji": "^13.0.0",
         "v-clipboard": "^2.2.3",
         "vuepress": "^1.5.2",
-        "vuepress-plugin-feed": "^0.1.8"
+        "vuepress-plugin-feed": "^0.1.8",
+        "vuepress-plugin-matomo": "^1.0.2"
     }
 }

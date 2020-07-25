@@ -12,7 +12,7 @@
             <path fill="var(--color-primary-900)" d="M2340 0v120L0 78.956z" />
         </svg>
         <!-- Fix Firefox quirk -->
-        <div class="h-px bg-neutral-300"></div>
+        <div class="h-px bg-neutral-200"></div>
     </header>
 </template>
 

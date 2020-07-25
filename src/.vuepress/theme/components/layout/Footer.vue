@@ -1,7 +1,7 @@
 <template>
     <footer class="bg-neutral-900">
         <!-- Fix Firefox quirk -->
-        <div class="-mb-px h-px bg-neutral-300"></div>
+        <div class="-mb-px h-px bg-neutral-200"></div>
         <!-- Footer shapes -->
         <svg class="w-full flex-no-shrink -mb-px" preserveAspectRatio="none" style="height:3vw" viewBox="0 0 2340 120">
             <path fill="var(--color-neutral-300)" d="M2340 43.647H0v-43h2340z" />

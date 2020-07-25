@@ -2,6 +2,7 @@
     <footer class="bg-neutral-900">
         <!-- Fix Firefox quirk -->
         <div class="-mb-px h-px bg-neutral-300"></div>
+        <!-- Footer shapes -->
         <svg class="w-full flex-no-shrink -mb-px" preserveAspectRatio="none" style="height:3vw" viewBox="0 0 2340 120">
             <path fill="var(--color-neutral-300)" d="M2340 43.647H0v-43h2340z" />
             <path fill="var(--color-primary-900)" d="M0 120V0l2340 41.044z" />

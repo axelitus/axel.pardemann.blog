@@ -88,6 +88,11 @@ module.exports = {
                 }
             }
         }],
+        ['vuepress-plugin-matomo', {
+            enableLinkTracking: true,
+            siteId: 2,
+            trackerUrl: 'https://analytics.cloudhalla.io/',
+        }],
     ],
 
     postcss: {

@@ -1,6 +1,6 @@
 {
     "name": "@axelitus/axel.pardemann.blog",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "Axel Pardemann Blog - I'm a mexican-german software engineer living in Mexico City. Currently, I work full-time as an IT Services Manager and Systems Administrator. I still continue working on code on my spare time and I'm also a huge advocate for open-source.",
     "keywords": [
         "blog",
@@ -46,6 +46,7 @@
         "twemoji": "^13.0.0",
         "v-clipboard": "^2.2.3",
         "vuepress": "^1.5.2",
-        "vuepress-plugin-feed": "^0.1.8"
+        "vuepress-plugin-feed": "^0.1.8",
+        "vuepress-plugin-matomo": "^1.0.2"
     }
 }

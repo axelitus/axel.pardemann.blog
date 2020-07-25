@@ -28,6 +28,15 @@ module.exports = {
                 {name: 'Hobbies', attrs: {href: 'https://axel.pardemann.me/hobbies'}},
                 {name: 'Uses', attrs: {href: 'https://axel.pardemann.me/uses'}},
             ]
+        },
+        defaultAuthor: "axelitus",
+        authors: {
+            axelitus: {
+                name: "Axel Pardemann",
+                email: "axelitusdev@gmail.com",
+                url: "https://axel.pardemann.me",
+                github: "axelitus",
+            }
         }
     },
     

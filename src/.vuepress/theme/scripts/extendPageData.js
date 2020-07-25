@@ -8,6 +8,7 @@ module.exports = {
         classify(page)
         prefixPermalinks(page)
         renderTitle(page)
+        setAuthor(page)
     }
 }
 
@@ -43,6 +44,41 @@ function renderTitle(page) {
 
     page.renderedTitle = twemoji.parse(page._context.markdown.render(page.title)['html'])
         .replace(/(<(\/?[p|div|h\d]+)>)/ig, '')
+}
+
+function setAuthor(page) {
+    if (!page.isHome) {
+        let author = page.frontmatter.author
+        if (author === undefined) {
+            author = page._context.themeConfig.defaultAuthor
+        }
+
+        page.author = objectifyAuthor(author, page._context.themeConfig)
+    }
+}
+
+function objectifyAuthor(author, themeConfig) {
+    if (typeof author === 'string') {
+        if (author in themeConfig.authors) {
+            return themeConfig.authors[author]
+        }
+
+        return {
+            name: author,
+        }
+    }
+
+    if (typeof author !== 'object') {
+        return {
+            name: themeConfig.defaultAuthor,
+        }
+    }
+
+    if (!'name' in author) {
+        author.name = themeConfig.defaultAuthor
+    }
+
+    return author
 }
 
 function setPublishedAt(page) {

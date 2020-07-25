@@ -1,50 +1,51 @@
 {
-  "name": "@axelitus/axel.pardemann.blog",
-  "version": "0.0.1",
-  "description": "Axel Pardemann Blog",
-  "keywords": [
-    "blog",
-    "laravel",
-    "php",
-    "tech",
-    "vuejs",
-    "vuepress"
-  ],
-  "authors": {
-    "name": "Axel Pardemann",
-    "email": "axel@pardemann.me"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/axelitus/axel.pardemann.blog.git"
-  },
-  "scripts": {
-    "dev": "vuepress dev src",
-    "build": "vuepress build src"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.2.0",
-    "@vuepress/plugin-blog": "^1.9.2",
-    "@vuepress/plugin-last-updated": "^1.5.2",
-    "autoprefixer": "^9.8.4",
-    "markdown-it-abbr": "^1.0.4",
-    "markdown-it-container": "^3.0.0",
-    "markdown-it-deflist": "^2.0.3",
-    "markdown-it-emoji": "^1.4.0",
-    "markdown-it-footnote": "^3.0.2",
-    "markdown-it-ins": "^3.0.0",
-    "markdown-it-mark": "^3.0.0",
-    "markdown-it-sub": "^1.0.0",
-    "markdown-it-sup": "^1.0.0",
-    "moment-timezone": "^0.5.31",
-    "node-sass": "^4.14.1",
-    "postcss-import": "^12.0.1",
-    "prismjs": "^1.20.0",
-    "sass-loader": "^9.0.2",
-    "tailwindcss": "^1.5.1",
-    "twemoji": "^13.0.0",
-    "v-clipboard": "^2.2.3",
-    "vuepress": "^1.5.2"
-  }
+    "name": "@axelitus/axel.pardemann.blog",
+    "version": "0.0.1",
+    "description": "Axel Pardemann Blog - I'm a mexican-german software engineer living in Mexico City. Currently, I work full-time as an IT Services Manager and Systems Administrator. I still continue working on code on my spare time and I'm also a huge advocate for open-source.",
+    "keywords": [
+        "blog",
+        "laravel",
+        "php",
+        "tech",
+        "vuejs",
+        "vuepress"
+    ],
+    "authors": {
+        "name": "Axel Pardemann",
+        "email": "axel@pardemann.me"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/axelitus/axel.pardemann.blog.git"
+    },
+    "scripts": {
+        "dev": "vuepress dev src",
+        "build": "vuepress build src"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.2.0",
+        "@vuepress/plugin-blog": "^1.9.2",
+        "@vuepress/plugin-last-updated": "^1.5.2",
+        "autoprefixer": "^9.8.4",
+        "markdown-it-abbr": "^1.0.4",
+        "markdown-it-container": "^3.0.0",
+        "markdown-it-deflist": "^2.0.3",
+        "markdown-it-emoji": "^1.4.0",
+        "markdown-it-footnote": "^3.0.2",
+        "markdown-it-ins": "^3.0.0",
+        "markdown-it-mark": "^3.0.0",
+        "markdown-it-sub": "^1.0.0",
+        "markdown-it-sup": "^1.0.0",
+        "moment-timezone": "^0.5.31",
+        "node-sass": "^4.14.1",
+        "postcss-import": "^12.0.1",
+        "prismjs": "^1.20.0",
+        "sass-loader": "^9.0.2",
+        "tailwindcss": "^1.5.1",
+        "twemoji": "^13.0.0",
+        "v-clipboard": "^2.2.3",
+        "vuepress": "^1.5.2",
+        "vuepress-plugin-feed": "^0.1.8"
+    }
 }

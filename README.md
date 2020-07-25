@@ -4,6 +4,7 @@
         Axel Pardemann Blog
     </h1>
     <p align="center">
+        <a href="https://app.netlify.com/sites/axel-pardemann-blog/deploys"><img alt="Deploy" src="https://img.shields.io/netlify/48be6ea0-d56b-43c5-9bc4-ef6490e2c57e.svg?style=flat-square&label=netlify&logo=netlify&logoColor=eceff4&colorA=4c566a&colorB=b48ead"></a>
         <a href="https://github.com/axelitus/axel.pardemann.blog"><img alt="Stable Release" src="https://img.shields.io/github/v/release/axelitus/axel.pardemann.blog.svg?style=flat-square&label=release&logo=packagist&logoColor=eceff4&colorA=4c566a&colorB=5e81ac"></a>
         <a href="https://github.com/axelitus/axel.pardemann.blog"><img alt="Total Downloads" src="https://img.shields.io/github/downloads/axelitus/axel.pardemann.blog/total.svg?style=flat-square&label=downloads&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"></a> 
         <a href="https://vuepress.vuejs.org"><img alt="Vuepress" src="https://img.shields.io/static/v1.svg?style=flat-square&label=vuepress&logo=vue.js&message=1.5.2&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"></a>

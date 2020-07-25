@@ -43,7 +43,12 @@ module.exports = {
     },
 
     plugins: [
-        '@vuepress/last-updated',
+        ['@vuepress/last-updated', {
+            transformer: (timestamp, lang) => {
+                return new Date(timestamp).toISOString()
+            }
+        }
+        ],
         ['vuepress-plugin-feed', {
             canonical_base: canonical_base,
             description: description,

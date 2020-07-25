@@ -24,8 +24,9 @@
                     <app-post-tags-list :tags="post.frontmatter.tags" />
                 </div>
             </header>
-            <div class="text-xs lg:text-sm text-neutral-350 text-right">
-                <app-date-display :date="post.lastUpdated" :show-relative="true" prefix="Last updated: " />
+            <div class="flex flex-col sm:flex-row justify-between text-xs lg:text-base text-neutral-350">
+                <app-author-display :author="post.author" />
+                <app-date-display class="sm:text-right" :date="post.lastUpdated" :show-relative="true" prefix="Last updated: " />
             </div>
             <Content class="post-content prose prose-sm max-w-none md:prose md:max-w-none lg:prose-lg xl:prose-xl" />
         </article>
@@ -33,16 +34,18 @@
 </template>
 
 <script>
+    import AppAuthorDisplay from "@theme/components/general/AuthorDisplay"
+    import AppDateDisplay from "@theme/components/general/DateDisplay"
     import AppPostCardPermalink from "@theme/components/posts/PostCardPermalink"
     import AppPostTagsList from "@theme/components/posts/PostTagsList"
-    import AppDateDisplay from "@theme/components/general/DateDisplay"
 
     export default {
         name: "PostDisplay",
         components: {
+            AppAuthorDisplay,
+            AppDateDisplay,
             AppPostCardPermalink,
             AppPostTagsList,
-            AppDateDisplay,
         },
         props: {
             post: {

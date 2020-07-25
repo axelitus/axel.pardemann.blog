@@ -17,8 +17,9 @@
                 <app-post-tags-list :tags="post.frontmatter.tags" />
             </div>
         </header>
-        <div class="text-xs lg:text-sm text-neutral-350 text-right">
-            <app-date-display :date="post.lastUpdated" :show-relative="true" prefix="Last updated: " />
+        <div class="flex flex-col md:flex-row justify-between text-xs lg:text-sm text-neutral-350">
+            <app-author-display :author="post.author" />
+            <app-date-display class="sm:text-right" :date="post.lastUpdated" :show-relative="true" prefix="Last updated: " />
         </div>
         <div class="mt-3 mb-2 text-neutral-600">
             <div v-html="excerpt" class="prose prose-sm max-w-none md:prose md:max-w-none lg:prose-lg xl:prose-xl" />
@@ -35,16 +36,18 @@
 </template>
 
 <script>
+    import AppAuthorDisplay from "@theme/components/general/AuthorDisplay"
+    import AppDateDisplay from "@theme/components/general/DateDisplay"
     import AppPostCardPermalink from "@theme/components/posts/PostCardPermalink";
     import AppPostTagsList from "@theme/components/posts/PostTagsList"
-    import AppDateDisplay from "@theme/components/general/DateDisplay"
 
     export default {
         name: "PostCard",
         components: {
+            AppAuthorDisplay,
+            AppDateDisplay,
             AppPostCardPermalink,
             AppPostTagsList,
-            AppDateDisplay,
         },
         computed: {
             excerpt() {

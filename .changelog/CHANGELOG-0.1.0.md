@@ -1,4 +1,4 @@
-# Unreleased
+# Release 0.1.0
 
 The first alpha release of the blog that can be published even when they may not be any posts written yet.
 

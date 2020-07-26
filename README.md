@@ -49,7 +49,7 @@ to learn how to report security vulnerabilities within this repo.
 - [Axel Pardemann](https://github.com/axelitus)
 - [All Contributors](../../contributors)
 
-A big thanks to @lorisleiva. I learned a lot about Vuepress from his own blog which you can find [here](https://github.com/lorisleiva/blog).
+A big thanks to [@lorisleiva](https://github.com/lorisleiva). I learned a lot about Vuepress from his own blog which you can find [here](https://github.com/lorisleiva/blog).
 
 ## Support the development
 
